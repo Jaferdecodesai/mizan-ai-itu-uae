@@ -1,5 +1,5 @@
-@font-face{font-family:"Inter";src:url(/assets/fonts/Inter-var-latin.woff2) format("woff2");font-weight:100 900;font-display:swap}
-@font-face{font-family:"JetBrains Mono";src:url(/assets/fonts/JetBrainsMono-var-latin.woff2) format("woff2");font-weight:400 600;font-display:swap}
+@font-face{font-family:"Inter";src:url(fonts/Inter-var-latin.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(fonts/JetBrainsMono-var-latin.woff2) format("woff2");font-weight:400 600;font-display:swap}
 :root{
   --bone:#faf7f2;--paper:#fff;--parch:#f1ece2;--line:#e6dfd1;--line2:#d9d1c0;
   --ink:#1c1917;--graphite:#3a332c;--taupe:#6b6357;--ash:#8a8378;

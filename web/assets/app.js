@@ -318,8 +318,8 @@ function setRun(id) {
 
 async function init() {
   const [b, t, ch, man, ev] = await Promise.all([
-    getText("/data/runs/S1-baseline.audit.jsonl"), getText("/data/runs/S1-twist.audit.jsonl"), getText("/data/kb/chunks.jsonl"),
-    fetch("/data/kb/manifest.json").then(r => r.json()), fetch("/data/kb/eval.json").then(r => r.ok ? r.json() : null)]);
+    getText("data/runs/S1-baseline.audit.jsonl"), getText("data/runs/S1-twist.audit.jsonl"), getText("data/kb/chunks.jsonl"),
+    fetch("data/kb/manifest.json").then(r => r.json()), fetch("data/kb/eval.json").then(r => r.ok ? r.json() : null)]);
   state.runs["S1-baseline"] = parseRun(b); state.runs["S1-twist"] = parseRun(t);
   state.chunks = ch.split("\n").filter(Boolean).map(l => JSON.parse(l));
   state.byId = Object.fromEntries(state.chunks.map(c => [c.chunk_id, c]));

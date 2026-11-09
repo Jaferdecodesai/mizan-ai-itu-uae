@@ -1,1 +1,8 @@
-8 passed, 1 warning in 7.34s
+........                                                                 [100%]
+=============================== warnings summary ===============================
+tests/test_core.py::test_scenario_uneven_release_and_twist
+  /workspace/mizan-ai/third_party/ITUAIReadiness/simulation/server/config.py:7: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.14/migration/
+    class Settings(BaseSettings):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+8 passed, 1 warning in 18.67s
