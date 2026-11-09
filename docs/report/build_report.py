@@ -48,7 +48,7 @@ def new_par(after_el, parts, size=BODY_PT, space_after=4):
 set_text(P[0], "AI for Good Sandbox Hackathon – AqionLabs – Mizan AI: a multi-agent policy war-room for public-service AI incidents")
 set_text(P[1], "Team leader: Jafer Mohammed, AqionLabs (solo founder; solo entry)", size=BODY_PT)
 set_text(P[2], "Team members: none.  Contact details: jaferm@aqionlabs.com", size=BODY_PT)
-links = f"Github link: {REPO}  ·  Live replay: {DEMO}" + (f"  ·  Mirror: {CF}" if CF else "") + "  ·  Knowledge base: kb/export/ in the repository (manifest.json, chunks.jsonl)"
+links = f"Github link: {REPO}  ·  Live replay: {DEMO}" + (f"  ·  Mirror: {CF}" if CF else "") + "  ·  Knowledge base: " + REPO + "/tree/main/kb/export (manifest.json, chunks.jsonl)"
 set_text(P[3], links, size=BODY_PT); P[3].alignment = WD_ALIGN_PARAGRAPH.LEFT
 
 heads = {5: "a", 8: "b", 12: "c", 14: "d", 17: "g", 27: "h"}

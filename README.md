@@ -7,7 +7,6 @@ Author: Jafer Mohammed, AqionLabs (solo entry) · jaferm@aqionlabs.com
 - **Cloudflare mirror:** https://mizan-ai-itu-uae.aqionlabs.workers.dev (Worker uploaded and deployed; on 9 Nov 2026 the workers.dev hostname still returned Cloudflare 404 "error code: 1042", see `deploy/README.md`)
 - **Technical report:** [docs/report/Mizan-AI_Technical-Report_AqionLabs.pdf](docs/report/Mizan-AI_Technical-Report_AqionLabs.pdf) (4 pages, official template; editable DOCX alongside)
 - **Knowledge base (portable export):** [`kb/export/`](kb/export) (`chunks.jsonl` + `manifest.json`)
-- **Technical report:** [`docs/report/`](docs/report)
 
 Mizan (ميزان, "balance") simulates how a GenAI-powered government e-service and the institutions around it react to an incident. Six **role agents** receive *different* fragments of a synthetic incident at *different* times. Each one assesses the incident within its own mandate, cites UAE documents and global policy examples from a knowledge base built with the **ITU AI Readiness reference code**, and passes typed messages to the others. Only a **human approver** can decide. Every step goes into an append-only, SHA-256 hash-chained audit log, and the web replay renders that log directly and re-verifies the chain in your browser.
 
