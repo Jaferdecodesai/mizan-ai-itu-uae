@@ -1,0 +1,162 @@
+{
+ "run_id": "S1-baseline",
+ "messages": 19,
+ "by_type": {
+  "INFORM": 2,
+  "REQUEST": 1,
+  "ASSESS": 9,
+  "PROPOSE": 6,
+  "OBJECT": 0,
+  "DECIDE": 1
+ },
+ "claims": 31,
+ "claim_status": {
+  "SUPPORTED": 22,
+  "WEAK": 3,
+  "INFO": 6
+ },
+ "gaps": [
+  "G1",
+  "G2",
+  "G3",
+  "G5",
+  "G6"
+ ],
+ "deliveries": [
+  {
+   "t": 0,
+   "event": "E0",
+   "to": "service_agent"
+  },
+  {
+   "t": 0,
+   "event": "E0",
+   "to": "service_owner"
+  },
+  {
+   "t": 0,
+   "event": "E0",
+   "to": "data_protection"
+  },
+  {
+   "t": 0,
+   "event": "E0",
+   "to": "regulator"
+  },
+  {
+   "t": 0,
+   "event": "E0",
+   "to": "cyber"
+  },
+  {
+   "t": 0,
+   "event": "E0",
+   "to": "policy_adviser"
+  },
+  {
+   "t": 10,
+   "event": "E1",
+   "to": "service_owner"
+  },
+  {
+   "t": 18,
+   "event": "E2",
+   "to": "data_protection"
+  },
+  {
+   "t": 25,
+   "event": "E3",
+   "to": "service_agent"
+  },
+  {
+   "t": 29,
+   "event": "E3",
+   "to": "service_owner"
+  },
+  {
+   "t": 32,
+   "event": "E4",
+   "to": "cyber"
+  },
+  {
+   "t": 40,
+   "event": "E5",
+   "to": "regulator"
+  },
+  {
+   "t": 60,
+   "event": "E7",
+   "to": "service_agent"
+  },
+  {
+   "t": 60,
+   "event": "E7",
+   "to": "service_owner"
+  },
+  {
+   "t": 60,
+   "event": "E7",
+   "to": "data_protection"
+  },
+  {
+   "t": 60,
+   "event": "E7",
+   "to": "regulator"
+  },
+  {
+   "t": 60,
+   "event": "E7",
+   "to": "cyber"
+  },
+  {
+   "t": 60,
+   "event": "E7",
+   "to": "policy_adviser"
+  }
+ ],
+ "knowledge_end": {
+  "service_agent": [
+   "decision_round",
+   "service_live",
+   "wrong_answers"
+  ],
+  "service_owner": [
+   "decision_round",
+   "failover_foreign",
+   "pii_in_prompts",
+   "service_live",
+   "vendor_retention",
+   "wrong_answers"
+  ],
+  "data_protection": [
+   "decision_round",
+   "pii_in_prompts",
+   "service_live",
+   "vendor_retention"
+  ],
+  "regulator": [
+   "decision_round",
+   "service_live",
+   "vendor_retention"
+  ],
+  "cyber": [
+   "decision_round",
+   "misinfo",
+   "service_live"
+  ],
+  "policy_adviser": [
+   "decision_round",
+   "failover_foreign",
+   "misinfo",
+   "pii_in_prompts",
+   "service_live",
+   "vendor_retention",
+   "wrong_answers"
+  ]
+ },
+ "chain": {
+  "ok": true,
+  "records": 44,
+  "head": "eb4b24faeadeb4dda4c64f18e4f99729aeae809d8bc107f6a359098e06c65418"
+ }
+}

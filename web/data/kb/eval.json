@@ -1,0 +1,857 @@
+{
+ "run_at": "2026-11-09T15:41:57.060012+00:00",
+ "k": 5,
+ "n_queries": 30,
+ "embedding": "fastembed:nomic-ai/nomic-embed-text-v1.5",
+ "methods": {
+  "bm25": {
+   "doc_hit@5": 1.0,
+   "doc_hits": 30,
+   "section_hit@5": 1.0,
+   "section_hits": 19,
+   "section_queries": 19,
+   "doc_mrr@5": 0.9,
+   "seconds": 0.16
+  },
+  "hybrid": {
+   "doc_hit@5": 0.967,
+   "doc_hits": 29,
+   "section_hit@5": 1.0,
+   "section_hits": 19,
+   "section_queries": 19,
+   "doc_mrr@5": 0.886,
+   "seconds": 5.34
+  },
+  "vector": {
+   "doc_hit@5": 0.933,
+   "doc_hits": 28,
+   "section_hit@5": 1.0,
+   "section_hits": 19,
+   "section_queries": 19,
+   "doc_mrr@5": 0.883,
+   "seconds": 1.8
+  }
+ },
+ "per_query": [
+  {
+   "q": "Can personal data be transferred outside the UAE to a country without adequate data protection law?",
+   "gold_doc": "uae-pdpl-2021",
+   "gold_sections": [
+    "uae-pdpl-2021:art-22",
+    "uae-pdpl-2021:art-23"
+   ],
+   "bm25": [
+    "eu-gdpr-2016:art-45",
+    "uae-data-protection-portal:part-1-4",
+    "uae-pdpl-2021:art-22",
+    "uae-pdpl-2021:art-22-2",
+    "uae-pdpl-2021:art-2"
+   ],
+   "hybrid": [
+    "uae-data-protection-portal:part-1-4",
+    "uae-pdpl-2021:art-22-2",
+    "uae-pdpl-2021:art-22",
+    "eu-gdpr-2016:art-45",
+    "uae-data-protection-portal:part-4-4"
+   ],
+   "vector": [
+    "uae-data-protection-portal:part-1-4",
+    "uae-pdpl-2021:art-22-2",
+    "uae-ai-strategy-2031:p-21-3",
+    "uae-cybercrime-2021:art-13",
+    "uae-cybercrime-2021:art-69"
+   ]
+  },
+  {
+   "q": "Controller obligation to notify the data office of a personal data breach",
+   "gold_doc": "uae-pdpl-2021",
+   "gold_sections": [
+    "uae-pdpl-2021:art-9"
+   ],
+   "bm25": [
+    "uae-pdpl-2021:art-9",
+    "eu-gdpr-2016:art-33",
+    "eu-gdpr-2016:art-34",
+    "eu-gdpr-2016:art-90",
+    "eu-gdpr-2016:art-58"
+   ],
+   "hybrid": [
+    "uae-pdpl-2021:art-9",
+    "eu-gdpr-2016:art-33",
+    "eu-gdpr-2016:art-34",
+    "eu-gdpr-2016:art-70-2",
+    "eu-gdpr-2016:art-19"
+   ],
+   "vector": [
+    "eu-gdpr-2016:art-33",
+    "uae-pdpl-2021:art-9",
+    "eu-gdpr-2016:art-70-2",
+    "eu-gdpr-2016:art-34",
+    "uae-pdpl-2021:art-7"
+   ]
+  },
+  {
+   "q": "Impact assessment before processing personal data with new technologies that poses high risk",
+   "gold_doc": "uae-pdpl-2021",
+   "gold_sections": [
+    "uae-pdpl-2021:art-21"
+   ],
+   "bm25": [
+    "uae-pdpl-2021:art-21",
+    "eu-gdpr-2016:art-35",
+    "uae-pdpl-2021:art-10",
+    "uae-pdpl-2021:art-21-2",
+    "eu-gdpr-2016:art-35-3"
+   ],
+   "hybrid": [
+    "uae-pdpl-2021:art-21",
+    "eu-gdpr-2016:art-35",
+    "uae-pdpl-2021:art-21-2",
+    "eu-gdpr-2016:art-35-3",
+    "eu-ai-act-2024:art-27-2"
+   ],
+   "vector": [
+    "uae-pdpl-2021:art-21",
+    "eu-gdpr-2016:art-35",
+    "uae-pdpl-2021:art-21-2",
+    "eu-ai-act-2024:art-27-2",
+    "nist-ai-rmf-1:p-11"
+   ]
+  },
+  {
+   "q": "Right to object to decisions based solely on automated processing including profiling",
+   "gold_doc": "uae-pdpl-2021",
+   "gold_sections": [
+    "uae-pdpl-2021:art-18"
+   ],
+   "bm25": [
+    "uae-pdpl-2021:art-18",
+    "eu-gdpr-2016:art-21",
+    "eu-gdpr-2016:art-22",
+    "eu-gdpr-2016:art-13-2",
+    "uae-pdpl-2021:art-17"
+   ],
+   "hybrid": [
+    "uae-pdpl-2021:art-18",
+    "eu-gdpr-2016:art-22",
+    "eu-gdpr-2016:art-21",
+    "uae-pdpl-2021:art-17",
+    "eu-gdpr-2016:art-13-2"
+   ],
+   "vector": [
+    "uae-pdpl-2021:art-18",
+    "eu-gdpr-2016:art-22",
+    "uae-pdpl-2021:art-17",
+    "eu-gdpr-2016:art-21",
+    "eu-gdpr-2016:art-47-2"
+   ]
+  },
+  {
+   "q": "Personal data must be collected for a specific clear purpose and not processed in a way incompatible with that purpose",
+   "gold_doc": "uae-pdpl-2021",
+   "gold_sections": [
+    "uae-pdpl-2021:art-5"
+   ],
+   "bm25": [
+    "uae-pdpl-2021:art-5",
+    "eu-gdpr-2016:art-5",
+    "eu-gdpr-2016:art-6-3",
+    "uae-genai-guide:p-6-2",
+    "eu-gdpr-2016:art-25"
+   ],
+   "hybrid": [
+    "uae-pdpl-2021:art-5",
+    "eu-gdpr-2016:art-5",
+    "eu-gdpr-2016:art-13-2",
+    "eu-gdpr-2016:art-6-3",
+    "eu-gdpr-2016:art-4-3"
+   ],
+   "vector": [
+    "uae-pdpl-2021:art-5",
+    "eu-gdpr-2016:art-5",
+    "eu-ai-act-2024:art-10-3",
+    "uae-pdpl-2021:art-4",
+    "eu-gdpr-2016:art-9-3"
+   ]
+  },
+  {
+   "q": "Appointment of a data protection officer by the controller",
+   "gold_doc": "uae-pdpl-2021",
+   "gold_sections": [
+    "uae-pdpl-2021:art-10"
+   ],
+   "bm25": [
+    "eu-gdpr-2016:art-38",
+    "eu-gdpr-2016:art-37",
+    "uae-pdpl-2021:art-12",
+    "eu-gdpr-2016:art-37-2",
+    "uae-pdpl-2021:art-10"
+   ],
+   "hybrid": [
+    "eu-gdpr-2016:art-38",
+    "eu-gdpr-2016:art-37",
+    "uae-pdpl-2021:art-10",
+    "uae-pdpl-2021:art-12",
+    "eu-gdpr-2016:art-37-2"
+   ],
+   "vector": [
+    "uae-pdpl-2021:art-10",
+    "eu-gdpr-2016:art-37",
+    "eu-gdpr-2016:art-38",
+    "eu-gdpr-2016:art-37-2",
+    "uae-pdpl-2021:art-12"
+   ]
+  },
+  {
+   "q": "Penalty for spreading rumours and false news through the internet",
+   "gold_doc": "uae-cybercrime-2021",
+   "gold_sections": [
+    "uae-cybercrime-2021:art-52"
+   ],
+   "bm25": [
+    "uae-cybercrime-2021:art-52",
+    "uae-cybercrime-2021:art-55",
+    "uae-cybercrime-2021:art-40",
+    "uae-cybercrime-2021:art-54",
+    "uae-cybercrime-2021:art-57"
+   ],
+   "hybrid": [
+    "uae-cybercrime-2021:art-52",
+    "uae-cybercrime-2021:art-55",
+    "uae-cybercrime-2021:art-54",
+    "uae-cybercrime-2021:art-40",
+    "uae-cybercrime-2021:art-51"
+   ],
+   "vector": [
+    "uae-cybercrime-2021:art-52",
+    "uae-cybercrime-2021:art-19",
+    "uae-cybercrime-2021:art-10",
+    "uae-cybercrime-2021:art-54",
+    "uae-cybercrime-2021:art-55"
+   ]
+  },
+  {
+   "q": "Hacking an information system of a government entity",
+   "gold_doc": "uae-cybercrime-2021",
+   "gold_sections": [
+    "uae-cybercrime-2021:art-3"
+   ],
+   "bm25": [
+    "uae-cybercrime-2021:art-3",
+    "uae-cybercrime-2021:art-5",
+    "uae-cybercrime-2021:art-2",
+    "uae-cybercrime-2021:art-22",
+    "uae-digital-gov-2025:part-5-13"
+   ],
+   "hybrid": [
+    "uae-cybercrime-2021:art-3",
+    "uae-cybercrime-2021:art-5",
+    "uae-cybercrime-2021:art-2",
+    "uae-cybercrime-2021:art-1-4",
+    "uae-cybercrime-2021:art-15"
+   ],
+   "vector": [
+    "uae-cybercrime-2021:art-3",
+    "uae-cybercrime-2021:art-2",
+    "uae-cybercrime-2021:art-5",
+    "uae-cybercrime-2021:art-1-4",
+    "uae-cybercrime-2021:art-15"
+   ]
+  },
+  {
+   "q": "Crime of infringing personal data or information using information technology means",
+   "gold_doc": "uae-cybercrime-2021",
+   "gold_sections": [
+    "uae-cybercrime-2021:art-6",
+    "uae-cybercrime-2021:art-13"
+   ],
+   "bm25": [
+    "uae-cybercrime-2021:art-10",
+    "uae-cybercrime-2021:art-1",
+    "uae-cybercrime-2021:art-1-3",
+    "uae-ict-health-2019:art-4",
+    "uae-cybercrime-2021:art-6"
+   ],
+   "hybrid": [
+    "uae-cybercrime-2021:art-10",
+    "uae-cybercrime-2021:art-6",
+    "uae-cybercrime-2021:art-13",
+    "uae-cybercrime-2021:art-1-3",
+    "eu-gdpr-2016:art-4-3"
+   ],
+   "vector": [
+    "uae-cybercrime-2021:art-6",
+    "uae-cybercrime-2021:art-16",
+    "uae-cybercrime-2021:art-13",
+    "uae-cybercrime-2021:art-10",
+    "uae-cybercrime-2021:art-4"
+   ]
+  },
+  {
+   "q": "Health data and information may not be stored, processed or transferred outside the State",
+   "gold_doc": "uae-ict-health-2019",
+   "gold_sections": [
+    "uae-ict-health-2019:art-13"
+   ],
+   "bm25": [
+    "uae-ict-health-2019:art-13",
+    "uae-ict-health-2019:art-1",
+    "uae-pdpl-2021:art-22-2",
+    "uae-pdpl-2021:art-22",
+    "eu-gdpr-2016:art-4-3"
+   ],
+   "hybrid": [
+    "uae-ict-health-2019:art-13",
+    "uae-pdpl-2021:art-22-2",
+    "uae-pdpl-2021:art-22",
+    "uae-ict-health-2019:art-12",
+    "eu-gdpr-2016:art-9-3"
+   ],
+   "vector": [
+    "uae-ict-health-2019:art-13",
+    "uae-ict-health-2019:art-12",
+    "uae-pdpl-2021:art-22-2",
+    "uae-pdpl-2021:art-22",
+    "uae-pdpl-2021:art-1-7"
+   ]
+  },
+  {
+   "q": "UAE charter principle of human oversight over artificial intelligence",
+   "gold_doc": "uae-ai-charter",
+   "gold_sections": [],
+   "bm25": [
+    "uae-ai-charter:part-3-4",
+    "uae-ai-charter:part-2-4",
+    "uae-ai-charter:part-1-4",
+    "uae-ai-intl-stance:part-7-7",
+    "oecd-ai-principles:principle-1-2"
+   ],
+   "hybrid": [
+    "uae-ai-charter:part-3-4",
+    "uae-ai-charter:part-2-4",
+    "uae-ai-charter:part-1-4",
+    "uae-ai-intl-stance:part-7-7",
+    "uae-ai-strategy-2031:p-23"
+   ],
+   "vector": [
+    "uae-ai-charter:part-3-4",
+    "uae-ai-charter:part-1-4",
+    "uae-ai-charter:part-2-4",
+    "uae-ai-intl-stance:part-5-7",
+    "uae-ai-intl-stance:part-7-7"
+   ]
+  },
+  {
+   "q": "AI ethics guidelines accountability transparency explainability of AI systems in the UAE",
+   "gold_doc": "uae-ai-ethics",
+   "gold_sections": [],
+   "bm25": [
+    "uae-ai-intl-stance:part-5-7",
+    "itu-ai-ready-2025:p-31-2",
+    "uae-ai-ethics:p-13",
+    "oecd-ai-principles:principle-1-3",
+    "uae-ai-charter:part-2-4"
+   ],
+   "hybrid": [
+    "uae-ai-intl-stance:part-5-7",
+    "uae-ai-charter:part-2-4",
+    "uae-ai-intl-stance:part-2-7",
+    "uae-ai-ethics:p-4-2",
+    "nist-ai-rmf-1:p-21"
+   ],
+   "vector": [
+    "uae-ai-intl-stance:part-5-7",
+    "uae-ai-charter:part-2-4",
+    "uae-ai-intl-stance:part-6-7",
+    "uae-ai-intl-stance:part-2-7",
+    "uae-ai-charter:part-3-4"
+   ]
+  },
+  {
+   "q": "Guidance for government employees on risks of using generative AI chatbots with sensitive information",
+   "gold_doc": "uae-genai-guide",
+   "gold_sections": [],
+   "bm25": [
+    "nist-ai-600-1:p-11-2",
+    "uae-genai-guide:p-77",
+    "nist-ai-600-1:p-11",
+    "nist-ai-600-1:p-22",
+    "sg-genai-mgf-2024:p-21-2"
+   ],
+   "hybrid": [
+    "nist-ai-600-1:p-22",
+    "nist-ai-600-1:p-11",
+    "sg-genai-mgf-2024:p-21-2",
+    "sg-genai-mgf-2024:p-17",
+    "sg-genai-mgf-2024:p-12"
+   ],
+   "vector": [
+    "nist-ai-600-1:p-22",
+    "nist-ai-600-1:p-18",
+    "nist-ai-600-1:p-21-2",
+    "nist-ai-600-1:p-24",
+    "nist-ai-600-1:p-35"
+   ]
+  },
+  {
+   "q": "National AI strategy objectives for deploying AI in government services and priority sectors",
+   "gold_doc": "uae-ai-strategy-2031",
+   "gold_sections": [],
+   "bm25": [
+    "uae-digital-gov-2025:part-8-13",
+    "uae-ai-strategy-2031:p-5",
+    "uae-ai-strategy-2031:p-12",
+    "uae-ai-strategy-2031:p-10-2",
+    "uae-ai-strategy-2031:p-3"
+   ],
+   "hybrid": [
+    "uae-ai-strategy-2031:p-5",
+    "uae-ai-strategy-2031:p-12",
+    "uae-ai-strategy-2031:p-10-2",
+    "uae-ai-strategy-2031:p-6",
+    "uae-digital-gov-2025:part-8-13"
+   ],
+   "vector": [
+    "uae-ai-strategy-2031:p-5",
+    "uae-ai-strategy-2031:p-16",
+    "uae-ai-strategy-2031:p-12",
+    "uae-ai-strategy-2031:p-10",
+    "uae-ai-strategy-2031:p-10-2"
+   ]
+  },
+  {
+   "q": "Dimensions and maturity model of the UAE digital government strategy 2025",
+   "gold_doc": "uae-digital-gov-2025",
+   "gold_sections": [],
+   "bm25": [
+    "uae-digital-gov-2025:part-1-13",
+    "uae-digital-gov-2025:part-4-13",
+    "uae-digital-gov-2025:part-6-13",
+    "uae-digital-gov-2025:part-5-13",
+    "uae-digital-gov-2025:part-7-13"
+   ],
+   "hybrid": [
+    "uae-digital-gov-2025:part-1-13",
+    "uae-digital-gov-2025:part-4-13",
+    "uae-digital-gov-2025:part-6-13",
+    "uae-digital-gov-2025:part-8-13",
+    "uae-digital-gov-2025:part-7-13"
+   ],
+   "vector": [
+    "uae-digital-gov-2025:part-1-13",
+    "uae-digital-gov-2025:part-6-13",
+    "uae-digital-gov-2025:part-4-13",
+    "uae-digital-gov-2025:part-8-13",
+    "uae-digital-gov-2025:part-7-13"
+   ]
+  },
+  {
+   "q": "UAE foreign policy stance on international AI governance and alliances",
+   "gold_doc": "uae-ai-intl-stance",
+   "gold_sections": [],
+   "bm25": [
+    "uae-ai-intl-stance:part-2-7",
+    "uae-ai-intl-stance:part-1-7",
+    "uae-ai-intl-stance:part-7-7",
+    "uae-ai-intl-stance:part-6-7",
+    "uae-ai-strategy-2031:p-15"
+   ],
+   "hybrid": [
+    "uae-ai-intl-stance:part-2-7",
+    "uae-ai-intl-stance:part-1-7",
+    "uae-ai-intl-stance:part-7-7",
+    "uae-ai-intl-stance:part-6-7",
+    "uae-ai-strategy-2031:p-15"
+   ],
+   "vector": [
+    "uae-ai-intl-stance:part-1-7",
+    "uae-ai-intl-stance:part-2-7",
+    "uae-ai-intl-stance:part-7-7",
+    "uae-ai-strategy-2031:p-22",
+    "uae-ai-intl-stance:part-6-7"
+   ]
+  },
+  {
+   "q": "Providers of high-risk AI systems must report serious incidents to market surveillance authorities",
+   "gold_doc": "eu-ai-act-2024",
+   "gold_sections": [
+    "eu-ai-act-2024:art-73"
+   ],
+   "bm25": [
+    "eu-ai-act-2024:art-73",
+    "eu-ai-act-2024:art-73-2",
+    "sg-genai-mgf-2024:p-15",
+    "eu-ai-act-2024:art-74-4",
+    "eu-ai-act-2024:art-60-5"
+   ],
+   "hybrid": [
+    "sg-genai-mgf-2024:p-15",
+    "eu-ai-act-2024:art-73",
+    "eu-ai-act-2024:art-73-2",
+    "eu-ai-act-2024:art-60-5",
+    "eu-ai-act-2024:art-74-4"
+   ],
+   "vector": [
+    "sg-genai-mgf-2024:p-15",
+    "eu-ai-act-2024:art-60-5",
+    "eu-ai-act-2024:art-74-4",
+    "eu-ai-act-2024:art-73",
+    "eu-ai-act-2024:art-73-2"
+   ]
+  },
+  {
+   "q": "Human oversight measures for high-risk AI systems so natural persons can intervene or stop the system",
+   "gold_doc": "eu-ai-act-2024",
+   "gold_sections": [
+    "eu-ai-act-2024:art-14"
+   ],
+   "bm25": [
+    "eu-ai-act-2024:art-14-2",
+    "eu-ai-act-2024:art-14",
+    "eu-ai-act-2024:art-27",
+    "eu-ai-act-2024:art-26",
+    "eu-ai-act-2024:art-13-2"
+   ],
+   "hybrid": [
+    "eu-ai-act-2024:art-14-2",
+    "eu-ai-act-2024:art-14",
+    "eu-ai-act-2024:art-13-2",
+    "eu-ai-act-2024:art-26-5",
+    "eu-ai-act-2024:annex-iii"
+   ],
+   "vector": [
+    "eu-ai-act-2024:art-14",
+    "eu-ai-act-2024:art-14-2",
+    "nist-ai-rmf-1:p-45",
+    "nist-ai-600-1:p-22",
+    "eu-ai-act-2024:art-13-2"
+   ]
+  },
+  {
+   "q": "High-risk AI used by public authorities to evaluate eligibility for essential public assistance benefits and services",
+   "gold_doc": "eu-ai-act-2024",
+   "gold_sections": [
+    "eu-ai-act-2024:annex-iii"
+   ],
+   "bm25": [
+    "eu-ai-act-2024:annex-iii-2",
+    "eu-ai-act-2024:annex-iii-4",
+    "eu-ai-act-2024:art-25-2",
+    "eu-ai-act-2024:art-62",
+    "eu-ai-act-2024:art-27"
+   ],
+   "hybrid": [
+    "eu-ai-act-2024:annex-iii-2",
+    "eu-ai-act-2024:art-27",
+    "eu-ai-act-2024:art-26-3",
+    "eu-ai-act-2024:art-26-5",
+    "eu-ai-act-2024:annex-iii"
+   ],
+   "vector": [
+    "eu-ai-act-2024:annex-iii",
+    "eu-ai-act-2024:art-26-3",
+    "eu-ai-act-2024:art-13-2",
+    "eu-ai-act-2024:art-26-5",
+    "eu-ai-act-2024:art-10-2"
+   ]
+  },
+  {
+   "q": "Automatic recording of events logs over the lifetime of a high-risk AI system",
+   "gold_doc": "eu-ai-act-2024",
+   "gold_sections": [
+    "eu-ai-act-2024:art-12"
+   ],
+   "bm25": [
+    "eu-ai-act-2024:art-12",
+    "eu-ai-act-2024:art-13-2",
+    "eu-ai-act-2024:art-19",
+    "eu-ai-act-2024:art-26-2",
+    "eu-ai-act-2024:art-21"
+   ],
+   "hybrid": [
+    "eu-ai-act-2024:art-12",
+    "eu-ai-act-2024:art-13-2",
+    "eu-ai-act-2024:art-19",
+    "eu-ai-act-2024:art-14-2",
+    "eu-ai-act-2024:art-22-2"
+   ],
+   "vector": [
+    "eu-ai-act-2024:art-12",
+    "eu-ai-act-2024:art-19",
+    "eu-ai-act-2024:art-13-2",
+    "eu-ai-act-2024:art-14-2",
+    "eu-ai-act-2024:annex-iii"
+   ]
+  },
+  {
+   "q": "Fundamental rights impact assessment by bodies governed by public law deploying high-risk AI",
+   "gold_doc": "eu-ai-act-2024",
+   "gold_sections": [
+    "eu-ai-act-2024:art-27"
+   ],
+   "bm25": [
+    "eu-ai-act-2024:art-27",
+    "eu-ai-act-2024:art-27-2",
+    "eu-ai-act-2024:art-77",
+    "eu-ai-act-2024:annex-viii-3",
+    "eu-ai-act-2024:art-31"
+   ],
+   "hybrid": [
+    "eu-ai-act-2024:art-27",
+    "eu-ai-act-2024:art-27-2",
+    "eu-ai-act-2024:art-7-3",
+    "eu-ai-act-2024:annex-viii-3",
+    "eu-ai-act-2024:art-77"
+   ],
+   "vector": [
+    "eu-ai-act-2024:art-27",
+    "eu-ai-act-2024:art-27-2",
+    "eu-ai-act-2024:art-7-3",
+    "eu-ai-act-2024:art-26-3",
+    "eu-ai-act-2024:art-26-5"
+   ]
+  },
+  {
+   "q": "Notify the supervisory authority of a personal data breach within 72 hours",
+   "gold_doc": "eu-gdpr-2016",
+   "gold_sections": [
+    "eu-gdpr-2016:art-33"
+   ],
+   "bm25": [
+    "eu-gdpr-2016:art-33",
+    "uae-pdpl-2021:art-9",
+    "eu-gdpr-2016:art-58",
+    "eu-gdpr-2016:art-60-2",
+    "eu-gdpr-2016:art-34"
+   ],
+   "hybrid": [
+    "eu-gdpr-2016:art-33",
+    "uae-pdpl-2021:art-9",
+    "eu-gdpr-2016:art-70-2",
+    "eu-gdpr-2016:art-34",
+    "eu-gdpr-2016:art-60-2"
+   ],
+   "vector": [
+    "eu-gdpr-2016:art-33",
+    "eu-gdpr-2016:art-70-2",
+    "eu-ai-act-2024:art-36-2",
+    "uae-pdpl-2021:art-9",
+    "eu-gdpr-2016:art-36"
+   ]
+  },
+  {
+   "q": "Transfer of personal data to a third country on the basis of an adequacy decision",
+   "gold_doc": "eu-gdpr-2016",
+   "gold_sections": [
+    "eu-gdpr-2016:art-45"
+   ],
+   "bm25": [
+    "eu-gdpr-2016:art-45",
+    "eu-gdpr-2016:art-45-2",
+    "eu-gdpr-2016:art-45-3",
+    "eu-gdpr-2016:art-49",
+    "eu-gdpr-2016:art-13"
+   ],
+   "hybrid": [
+    "eu-gdpr-2016:art-45",
+    "eu-gdpr-2016:art-49",
+    "eu-gdpr-2016:art-44",
+    "eu-gdpr-2016:art-45-2",
+    "eu-gdpr-2016:art-48"
+   ],
+   "vector": [
+    "eu-gdpr-2016:art-45",
+    "uae-pdpl-2021:art-22-2",
+    "eu-gdpr-2016:art-49",
+    "eu-gdpr-2016:art-44",
+    "uae-pdpl-2021:art-22"
+   ]
+  },
+  {
+   "q": "Processor contract obligations and sub-processors engaged by the processor",
+   "gold_doc": "eu-gdpr-2016",
+   "gold_sections": [
+    "eu-gdpr-2016:art-28"
+   ],
+   "bm25": [
+    "eu-gdpr-2016:art-28",
+    "eu-gdpr-2016:art-28-3",
+    "eu-gdpr-2016:art-4-4",
+    "eu-gdpr-2016:art-82",
+    "eu-gdpr-2016:art-28-2"
+   ],
+   "hybrid": [
+    "eu-gdpr-2016:art-28-3",
+    "eu-gdpr-2016:art-28",
+    "eu-gdpr-2016:art-4-4",
+    "eu-gdpr-2016:art-28-4",
+    "eu-gdpr-2016:art-28-2"
+   ],
+   "vector": [
+    "eu-gdpr-2016:art-28-3",
+    "uae-pdpl-2021:art-8",
+    "eu-gdpr-2016:art-28",
+    "eu-gdpr-2016:art-28-4",
+    "eu-gdpr-2016:art-4-4"
+   ]
+  },
+  {
+   "q": "OECD principle that AI actors should be accountable for the proper functioning of AI systems",
+   "gold_doc": "oecd-ai-principles",
+   "gold_sections": [
+    "oecd-ai-principles:principle-1-5"
+   ],
+   "bm25": [
+    "oecd-ai-principles:principle-1-5",
+    "oecd-ai-principles:principle-1-3",
+    "oecd-ai-principles:principle-1-2",
+    "uae-ai-ethics:p-2",
+    "nist-ai-rmf-1:p-5"
+   ],
+   "hybrid": [
+    "oecd-ai-principles:principle-1-5",
+    "oecd-ai-principles:principle-1-2",
+    "uae-ai-ethics:p-11",
+    "nist-ai-rmf-1:p-5",
+    "uae-ai-ethics:p-11-3"
+   ],
+   "vector": [
+    "oecd-ai-principles:principle-1-5",
+    "uae-ai-ethics:p-11",
+    "nist-ai-rmf-1:p-7-2",
+    "oecd-ai-principles:principle-1-2",
+    "nist-ai-600-1:p-17-2"
+   ]
+  },
+  {
+   "q": "Govern function: accountability structures and policies for AI risk management",
+   "gold_doc": "nist-ai-rmf-1",
+   "gold_sections": [],
+   "bm25": [
+    "nist-ai-rmf-1:p-27",
+    "nist-ai-rmf-1:p-28",
+    "nist-ai-rmf-1:p-27-2",
+    "nist-ai-rmf-1:p-29",
+    "nist-ai-rmf-1:p-36-2"
+   ],
+   "hybrid": [
+    "nist-ai-rmf-1:p-27",
+    "nist-ai-rmf-1:p-28",
+    "nist-ai-rmf-1:p-27-2",
+    "nist-ai-rmf-1:p-29",
+    "nist-ai-rmf-1:p-26-2"
+   ],
+   "vector": [
+    "nist-ai-rmf-1:p-27",
+    "nist-ai-rmf-1:p-28",
+    "nist-ai-rmf-1:p-5-2",
+    "nist-ai-rmf-1:p-27-2",
+    "nist-ai-rmf-1:p-26-2"
+   ]
+  },
+  {
+   "q": "Generative AI risks of confabulation and information integrity and incident disclosure",
+   "gold_doc": "nist-ai-600-1",
+   "gold_sections": [],
+   "bm25": [
+    "nist-ai-600-1:p-49-2",
+    "nist-ai-600-1:p-20",
+    "nist-ai-600-1:p-48",
+    "nist-ai-600-1:p-31",
+    "nist-ai-600-1:p-13-2"
+   ],
+   "hybrid": [
+    "nist-ai-600-1:p-48",
+    "nist-ai-600-1:p-24",
+    "nist-ai-600-1:p-31",
+    "nist-ai-600-1:p-35",
+    "nist-ai-600-1:p-6"
+   ],
+   "vector": [
+    "nist-ai-600-1:p-56-2",
+    "nist-ai-600-1:p-24",
+    "sg-genai-mgf-2024:p-14",
+    "nist-ai-600-1:p-10",
+    "nist-ai-600-1:p-29-3"
+   ]
+  },
+  {
+   "q": "Incident reporting for generative AI systems and trusted development and deployment",
+   "gold_doc": "sg-genai-mgf-2024",
+   "gold_sections": [],
+   "bm25": [
+    "sg-genai-mgf-2024:p-5",
+    "sg-genai-mgf-2024:p-3",
+    "sg-genai-mgf-2024:p-14-2",
+    "sg-genai-mgf-2024:p-15",
+    "sg-genai-mgf-2024:p-14"
+   ],
+   "hybrid": [
+    "sg-genai-mgf-2024:p-14",
+    "sg-genai-mgf-2024:p-15",
+    "sg-genai-mgf-2024:p-14-2",
+    "nist-ai-600-1:p-56-2",
+    "nist-ai-600-1:p-26"
+   ],
+   "vector": [
+    "sg-genai-mgf-2024:p-14",
+    "nist-ai-600-1:p-56-2",
+    "sg-genai-mgf-2024:p-15",
+    "nist-ai-600-1:p-26",
+    "nist-ai-600-1:p-49"
+   ]
+  },
+  {
+   "q": "Machine learning pipeline nodes source collector preprocessor model policy distributor sink",
+   "gold_doc": "itu-t-y3172",
+   "gold_sections": [],
+   "bm25": [
+    "itu-t-y3172:p-21",
+    "itu-t-y3172:p-25",
+    "itu-t-y3172:p-20",
+    "itu-t-y3172:p-24",
+    "itu-t-y3172:p-25-2"
+   ],
+   "hybrid": [
+    "itu-t-y3172:p-21",
+    "itu-t-y3172:p-25",
+    "itu-t-y3172:p-25-2",
+    "itu-t-y3172:p-21-2",
+    "itu-t-y3172:p-24"
+   ],
+   "vector": [
+    "itu-t-y3172:p-21",
+    "itu-t-y3172:p-25-2",
+    "itu-t-y3172:p-25",
+    "itu-t-y3172:p-21-2",
+    "itu-t-y3172:p-24-2"
+   ]
+  },
+  {
+   "q": "Machine learning function orchestrator managing ML pipelines and sandbox in future networks",
+   "gold_doc": "itu-t-y3172",
+   "gold_sections": [],
+   "bm25": [
+    "itu-t-y3172:p-21-3",
+    "itu-t-y3172:p-24-3",
+    "itu-t-y3172:p-3",
+    "itu-t-y3172:p-25",
+    "itu-t-y3172:p-21-2"
+   ],
+   "hybrid": [
+    "itu-t-y3172:p-21-3",
+    "itu-t-y3172:p-24-3",
+    "itu-t-y3172:p-21-2",
+    "itu-t-y3172:p-8",
+    "itu-t-y3172:p-25"
+   ],
+   "vector": [
+    "itu-t-y3172:p-8",
+    "itu-t-y3172:p-21-2",
+    "itu-t-y3172:p-24-3",
+    "itu-t-y3172:p-21-3",
+    "itu-t-y3172:p-25"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+data/chromadb/
+kb/raw/
+deploy/.deploy_program.js
+deploy/dist/
+.pytest_cache/
+deploy/.deploy_program2.js

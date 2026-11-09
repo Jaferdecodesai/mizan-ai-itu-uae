@@ -1,0 +1,64 @@
+/workspace/aqionlabs-challenges/itu-ai-for-good-uae/.venv/lib/python3.13/site-packages/fitz/__init__.py:17: FutureWarning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.
+  warnings.warn(
+2026-11-09 19:35:26,790 INFO mizan.kb_build: uae-ai-strategy-2031           56 chunks
+2026-11-09 19:35:27,024 INFO mizan.kb_build: uae-ai-ethics                  47 chunks
+2026-11-09 19:35:27,188 INFO mizan.kb_build: uae-genai-guide               130 chunks
+2026-11-09 19:35:27,191 INFO mizan.kb_build: uae-ai-charter                  4 chunks
+2026-11-09 19:35:27,194 INFO mizan.kb_build: uae-ai-intl-stance              7 chunks
+2026-11-09 19:35:27,205 INFO mizan.kb_build: uae-pdpl-2021                  45 chunks
+2026-11-09 19:35:27,219 INFO mizan.kb_build: uae-cybercrime-2021            82 chunks
+2026-11-09 19:35:27,231 INFO mizan.kb_build: uae-ict-health-2019            31 chunks
+2026-11-09 19:35:27,233 INFO mizan.kb_build: uae-data-protection-portal      4 chunks
+2026-11-09 19:35:27,236 INFO mizan.kb_build: uae-digital-gov-2025           13 chunks
+2026-11-09 19:35:27,287 INFO mizan.kb_build: eu-ai-act-2024                262 chunks
+2026-11-09 19:35:27,319 INFO mizan.kb_build: eu-gdpr-2016                  160 chunks
+2026-11-09 19:35:27,322 INFO mizan.kb_build: oecd-ai-principles             14 chunks
+2026-11-09 19:35:27,387 INFO mizan.kb_build: nist-ai-rmf-1                  84 chunks
+2026-11-09 19:35:27,525 INFO mizan.kb_build: nist-ai-600-1                 136 chunks
+2026-11-09 19:35:27,575 INFO mizan.kb_build: sg-genai-mgf-2024              42 chunks
+2026-11-09 19:35:27,644 INFO mizan.kb_build: itu-t-y3172                    61 chunks
+2026-11-09 19:35:27,732 INFO mizan.kb_build: itu-ai-ready-2025              97 chunks
+2026-11-09 19:35:27,757 INFO mizan.kb_build: export: 18 docs, 1275 chunks
+2026-11-09 19:35:28,057 WARNING server.knowledge.kb: Deleted collection 'kb_main'
+2026-11-09 19:35:40,526 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:35:40,527 INFO mizan.kb_build: embedded 64/1275
+2026-11-09 19:35:54,445 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:35:54,445 INFO mizan.kb_build: embedded 128/1275
+2026-11-09 19:36:03,322 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:36:03,322 INFO mizan.kb_build: embedded 192/1275
+2026-11-09 19:36:12,557 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:36:12,558 INFO mizan.kb_build: embedded 256/1275
+2026-11-09 19:36:25,921 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:36:25,922 INFO mizan.kb_build: embedded 320/1275
+2026-11-09 19:36:34,185 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:36:34,185 INFO mizan.kb_build: embedded 384/1275
+2026-11-09 19:36:44,031 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:36:44,032 INFO mizan.kb_build: embedded 448/1275
+2026-11-09 19:37:02,426 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:37:02,426 INFO mizan.kb_build: embedded 512/1275
+2026-11-09 19:37:31,873 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:37:31,873 INFO mizan.kb_build: embedded 576/1275
+2026-11-09 19:37:50,669 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:37:50,669 INFO mizan.kb_build: embedded 640/1275
+2026-11-09 19:38:08,481 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:38:08,481 INFO mizan.kb_build: embedded 704/1275
+2026-11-09 19:38:24,295 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:38:24,295 INFO mizan.kb_build: embedded 768/1275
+2026-11-09 19:38:38,613 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:38:38,613 INFO mizan.kb_build: embedded 832/1275
+2026-11-09 19:38:58,467 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:38:58,467 INFO mizan.kb_build: embedded 896/1275
+2026-11-09 19:39:30,041 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:39:30,042 INFO mizan.kb_build: embedded 960/1275
+2026-11-09 19:39:54,984 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:39:54,985 INFO mizan.kb_build: embedded 1024/1275
+2026-11-09 19:40:26,006 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:40:26,006 INFO mizan.kb_build: embedded 1088/1275
+2026-11-09 19:40:51,251 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:40:51,252 INFO mizan.kb_build: embedded 1152/1275
+2026-11-09 19:41:22,809 INFO server.knowledge.kb: Added 64 documents to collection 'kb_main'
+2026-11-09 19:41:22,810 INFO mizan.kb_build: embedded 1216/1275
+2026-11-09 19:41:54,887 INFO server.knowledge.kb: Added 59 documents to collection 'kb_main'
+2026-11-09 19:41:54,888 INFO mizan.kb_build: embedded 1275/1275
+2026-11-09 19:41:54,909 INFO mizan.kb_build: vector store: 1275 chunks in 386.8s
+EXIT 0

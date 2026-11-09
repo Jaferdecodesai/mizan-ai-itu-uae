@@ -1,0 +1,32 @@
+[
+ {
+  "title": "AE/SCNS/NCEMA 7000:2021 Business Continuity Management – Specifications",
+  "issuer": "NCEMA",
+  "url": "https://www.enec.ae/doc/ae-scns-ncema-7000-2021-specificationspublication-en-62bbcd1249cf5.pdf",
+  "reason": "Copyright NCEMA; consent required for reuse/training. Linked only, not ingested or redistributed."
+ },
+ {
+  "title": "National Information Assurance Framework (NIAF)",
+  "issuer": "UAE (government.ae)",
+  "url": "https://beta.government.ae/-/media/Documents-2023/National-Information-Assurance-Framework-NIAF.pdf",
+  "reason": "Host did not respond from the build box on 2026-11-09 (connection timeout). Not ingested."
+ },
+ {
+  "title": "National Cloud Security Policy (2023)",
+  "issuer": "UAE Cybersecurity Council (listed on uaelegislation.gov.ae)",
+  "url": "https://uaelegislation.gov.ae/en/policy/most_viewed_policy",
+  "reason": "Direct page/download URL not resolved before the build; not ingested."
+ },
+ {
+  "title": "Dubai AI Principles & Ethics",
+  "issuer": "Digital Dubai",
+  "url": "https://www.digitaldubai.ae/initiatives/ai-principles-ethics",
+  "reason": "URL returned a 404 page on 2026-11-09; not ingested."
+ },
+ {
+  "title": "National Cybersecurity Strategy (TDRA page)",
+  "issuer": "TDRA",
+  "url": "https://www.tdra.gov.ae/en/national-cybersecurity-strategy",
+  "reason": "Page rendered only Arabic site navigation/service listings from the build box (no strategy text extracted) on 2026-11-09; not ingested."
+ }
+]
