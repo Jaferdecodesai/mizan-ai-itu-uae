@@ -214,7 +214,7 @@ function renderGaps() {
   $("#gapList").innerHTML = R.gaps.map(g => {
     const u = g.uae_mapping; const cls = u.status.startsWith("provision") ? "found" : u.status.startsWith("partial") ? "partial" : "none";
     return `<article class="gap"><div style="display:flex;gap:8px;align-items:center"><span class="gid">${g.id}</span><span class="pill">${esc(g.type)}</span><span class="review" style="margin-left:auto">needs expert review</span></div>
-      <h3>${esc(g.title)}</h3><p>${esc(g.description)}</p>
+      <h3>${esc(g.title)}</h3><p>${esc(g.description).replace(/\*([^*]+)\*/g, "<em>$1</em>")}</p>
       <div class="map"><h4>UAE mapping (this KB)</h4><div><span class="ustat ${cls}">${esc(u.status)}</span> <span class="small dim">terms ${esc(u.terms_required.join(" + "))}; found ${esc(u.terms_found.join(", ") || "none")}</span></div>
         <div class="cites"><button class="cite" data-chunk="${esc(u.closest.chunk_id)}" data-quote="${esc(u.closest.quote)}">closest: ${esc(docLabel(u.closest))}</button></div></div>
       <div class="map"><h4>Global examples</h4><div class="cites">${g.global_examples.map(e => `<button class="cite global" data-chunk="${esc(e.chunk_id)}" data-quote="${esc(e.quote)}">${esc(docLabel(e))}</button>`).join("")}</div>
