@@ -14,3 +14,8 @@ Status on 9 Nov 2026 (Dubai, UTC+4): script `mizan-ai-itu-uae` uploaded and depl
 enabled, but https://mizan-ai-itu-uae.aqionlabs.workers.dev/ returned `404 error code: 1042`. A fresh one-line
 probe Worker (`mizan-probe`) behaved the same, while older Workers on the same account answered 200, so the
 problem is with routing for newly created Workers on that account, not with this code.
+
+Update 10 Nov 2026, 15:12 Dubai (UTC+4): after redeploying the redesigned bundle (etag a474afb8…, 11:11:47Z), both
+https://mizan-ai-itu-uae.aqionlabs.workers.dev/ and the probe answered **200**; the live page loads with no console errors
+under the Worker's CSP and the audit chain verifies. The 1042 errors of 9 Nov were therefore a delay in Cloudflare routing
+new workers.dev hostnames (no configuration was changed in between).

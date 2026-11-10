@@ -4,7 +4,7 @@
 Author: Jafer Mohammed, AqionLabs (solo entry) · jaferm@aqionlabs.com
 
 - **Live replay:** https://jaferdecodesai.github.io/mizan-ai-itu-uae/ (GitHub Pages, built from `web/` by `.github/workflows/pages.yml`)
-- **Cloudflare mirror:** https://mizan-ai-itu-uae.aqionlabs.workers.dev (Worker uploaded and deployed; on 9 Nov 2026 the workers.dev hostname still returned Cloudflare 404 "error code: 1042", see `deploy/README.md`)
+- **Cloudflare mirror:** https://mizan-ai-itu-uae.aqionlabs.workers.dev (single-file Worker with CSP; serving 200 since 10 Nov 2026 – see `deploy/README.md`)
 - **Technical report:** [docs/report/Mizan-AI_Technical-Report_AqionLabs.pdf](docs/report/Mizan-AI_Technical-Report_AqionLabs.pdf) (4 pages, official template; editable DOCX alongside)
 - **Knowledge base (portable export):** [`kb/export/`](kb/export) (`chunks.jsonl` + `manifest.json`)
 
