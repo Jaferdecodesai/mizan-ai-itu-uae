@@ -21,3 +21,12 @@ Challenge type: government / public-service policy AI for the UAE → the kit ma
 
 ## Screens
 Before (live v1): `evidence/screens/before/`. After: `evidence/screens/after/`. Comparison: `evidence/screens/redesign_compare.png`.
+
+## v3 – light base with matched dark components (2026-11-11, Dubai UTC+4)
+Owner direction: "keep the background light but include the box colors and dark components at some sections in a matching manner".
+- The kit ships dark palettes only, so a light surface set was **derived from Cobalt Civic** (`html[data-theme="light"]` in `app.css`): page #F3F6FB, cards #FFFFFF, cobalt-tinted box #E8F0FF, text #0A0F1A, muted #4B5872, border #D8E0EE. Accent stays #4D8DFF; where the accent is used as *text* on light it is #1F5FD6 (5.29:1 on the page). Button labels on the accent stay #0A0F1A (5.99:1), never white.
+- Box colours: white cards with a soft shadow for the timeline, dossier, gaps, manifest and KB results; cobalt-tinted boxes for the fact pills, the gap register's UAE/global mapping blocks and the method columns.
+- Dark components (the exact kit Cobalt Civic tokens via `.dark`): (1) the hero **run board** with split-flap counters, (2) a new **audit-chain panel** in the war-room (file, record count, head SHA-256, "Verify in this browser"), (3) the full-bleed **Y.3172 pipeline + readiness band**, (4) the **KB retrieval-eval** box. They alternate with light sections from top to bottom.
+- Status colours have light and dark variants (light: ok #0A6E4C, weak #8A5300, bad #C0322B; global-source ink #5B47D6).
+- Automated contrast scan over every visible text node (1440 and 375): 566 / 498 nodes checked, **0 below 4.5:1** (3:1 for large text).
+- Screens: `evidence/screens/light/`; comparison `evidence/screens/light_compare.png` (dark v2 vs light v3).

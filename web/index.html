@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en" data-palette="cobalt-civic" data-type="gulf">
+<html lang="en" data-palette="cobalt-civic" data-type="gulf" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mizan · policy war-room for public-service AI incidents</title>
 <meta name="description" content="Mizan AI: a multi-agent incident simulator for UAE digital government services. Synthetic scenario, cited UAE and global policy sources, hash-chained audit. ITU AI for Good Lab Hackathon UAE entry by AqionLabs.">
 <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-<meta name="theme-color" content="#0A0F1A">
+<meta name="theme-color" content="#F3F6FB">
 <link rel="preload" href="assets/fonts/ReadexPro-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/Unbounded-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/fonts.css">
@@ -37,7 +37,7 @@
   <div><h1>A policy war-room for public-service AI incidents.</h1>
   <p class="lede">Six role agents get different fragments of a synthetic incident at different times. They argue with citations to UAE law and global examples, and <em>only a human can decide</em>. Every step is written to a hash-chained audit log, and this page renders that log.</p></div>
   <div class="side">
-    <div class="board" aria-label="Run board">
+    <div class="board dark" aria-label="Run board">
       <div class="board-head"><span>Run board</span><b id="boardRun">S1 · baseline</b></div>
       <div class="cell wide"><span class="lbl">Audit records, SHA-256 chained</span><span class="flap" id="fRec" data-value="0000" aria-describedby="fRecT"></span><span class="sr" id="fRecT"></span></div>
       <div class="cell"><span class="lbl">Messages</span><span class="flap" id="fMsg" data-value="00"></span></div>
@@ -60,6 +60,12 @@
       <select id="speed" aria-label="Replay speed"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
     </div>
   </div>
+  <div class="chainbar dark" role="group" aria-label="Audit chain">
+    <div class="cb"><span class="lbl">Audit chain</span><span class="v" id="chainRun">—</span></div>
+    <div class="cb"><span class="lbl">Records</span><span class="v" id="chainRecs">—</span></div>
+    <div class="cb hash"><span class="lbl">Head hash · SHA-256</span><span class="v" id="chainHead">—</span></div>
+    <div class="cb act"><button class="btn" id="chainVerify">Verify in this browser</button><span id="chainOut" class="v small" aria-live="polite"></span></div>
+  </div>
   <div class="legend mono small" aria-hidden="true">
     <span><i class="g ev"></i>private event</span><span><i class="g INFORM"></i>INFORM</span><span><i class="g REQUEST"></i>REQUEST</span><span><i class="g ASSESS"></i>ASSESS</span><span><i class="g PROPOSE"></i>PROPOSE</span><span><i class="g OBJECT"></i>OBJECT</span><span><i class="g DECIDE"></i>DECIDE</span>
   </div>
@@ -79,7 +85,7 @@
   <div id="gapList" class="gap-list"></div>
 </section>
 
-<section class="align" aria-labelledby="alignH">
+<section class="align band dark" aria-labelledby="alignH">
   <div class="sec-head"><p class="eyebrow">03 · Alignment</p><h2 id="alignH">Y.3172 pipeline and AI Readiness mapping</h2><p class="dim">Each message carries the Y.3172 node it acts on and the ITU AI Readiness dimensions it touches. Select a node to filter the feed.</p></div>
   <div id="pipeline" class="pipeline"></div>
   <div id="dims" class="dims"></div>
@@ -104,7 +110,7 @@
       <ul id="notIngested" class="small"></ul>
     </div>
   </div>
-  <div id="evalBox" class="eval"></div>
+  <div id="evalBox" class="eval dark"></div>
 </section>
 
 <section class="method" aria-labelledby="methodH">

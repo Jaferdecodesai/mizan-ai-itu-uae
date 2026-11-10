@@ -296,6 +296,10 @@ function updateBoard(id) {
   const R = state.runs[id];
   flap("fRec", R.lines.length); flap("fMsg", R.items.filter(i => i.kind === "msg").length); flap("fGap", R.gaps.length);
   $("#boardRun").textContent = id === "S1-twist" ? "S1 · judge twist" : "S1 · baseline";
+  const lastRec = JSON.parse(R.lines[R.lines.length - 1]);
+  $("#chainRun").textContent = `runs/${id}.audit.jsonl`; $("#chainRecs").textContent = String(R.lines.length);
+  $("#chainHead").textContent = lastRec.hash.slice(0, 32) + "…"; $("#chainHead").title = lastRec.hash;
+  $("#chainOut").textContent = ""; $("#chainOut").className = "v small";
 }
 
 /* ---------- verify ---------- */
@@ -304,6 +308,8 @@ async function doVerify() {
   const r = await verifyChain(state.runs[state.run].lines, crypto.subtle);
   out.classList.add(r.ok ? "ok" : "bad");
   out.textContent = r.ok ? `✓ ${r.records} records · head ${r.head.slice(0, 10)}…` : `✕ broken at line ${r.brokenAt}: ${r.reason}`;
+  const co = $("#chainOut"); co.className = "v small " + (r.ok ? "ok" : "bad");
+  co.textContent = r.ok ? `✓ chain intact · recomputed ${r.records} SHA-256 links` : `✕ broken at line ${r.brokenAt}`;
   $("#verifyBtn").textContent = r.ok ? "Chain verified" : "Chain broken";
   setTimeout(() => { $("#verifyBtn").textContent = "Verify audit chain"; }, 2500);
 }
@@ -342,6 +348,7 @@ async function init() {
   setRun(location.hash === "#twist" ? "S1-twist" : "S1-baseline");
   document.querySelectorAll(".seg button").forEach(btn => btn.addEventListener("click", () => setRun(btn.dataset.run)));
   $("#verifyBtn").addEventListener("click", doVerify);
+  $("#chainVerify").addEventListener("click", doVerify);
   $("#playBtn").addEventListener("click", () => state.playing ? stop() : play());
   $("#scrub").addEventListener("input", e => { stop(); state.t = +e.target.value; applyTime(); });
   $("#kbQ").addEventListener("input", () => renderKB());
