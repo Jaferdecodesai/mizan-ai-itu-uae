@@ -49,7 +49,13 @@ set_text(P[0], "AI for Good Sandbox Hackathon – AqionLabs – Mizan AI: a mult
 set_text(P[1], "Team leader: Jafer Mohammed, AqionLabs (solo founder; solo entry)", size=BODY_PT)
 set_text(P[2], "Team members: none.  Contact details: jaferm@aqionlabs.com", size=BODY_PT)
 links = f"Github link: {REPO}  ·  Live replay: {DEMO}" + (f"  ·  Mirror: {CF}" if CF else "") + "  ·  Knowledge base: " + REPO + "/tree/main/kb/export (manifest.json, chunks.jsonl)"
-set_text(P[3], links, size=BODY_PT); P[3].alignment = WD_ALIGN_PARAGRAPH.LEFT
+set_text(P[3], f"Github link: {REPO}", size=BODY_PT); P[3].alignment = WD_ALIGN_PARAGRAPH.LEFT
+_last = P[3]._element
+for _line in [f"Live replay: {DEMO}"] + ([f"Mirror (Cloudflare): {CF}"] if CF else []) + [f"Knowledge base: {REPO}/tree/main/kb/export (manifest.json, chunks.jsonl)"]:
+    _el = copy.deepcopy(P[3]._element); _last.addnext(_el); _last = _el
+    _p = docx.text.paragraph.Paragraph(_el, P[3]._parent)
+    for _r in _p.runs[1:]: _r._element.getparent().remove(_r._element)
+    _p.runs[0].text = _line
 
 heads = {5: "a", 8: "b", 12: "c", 14: "d", 17: "g", 27: "h"}
 for i in heads:
