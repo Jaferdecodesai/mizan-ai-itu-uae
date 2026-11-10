@@ -1,12 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-palette="cobalt-civic" data-type="gulf">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mizan · policy war-room for public-service AI incidents</title>
 <meta name="description" content="Mizan AI: a multi-agent incident simulator for UAE digital government services. Synthetic scenario, cited UAE and global policy sources, hash-chained audit. ITU AI for Good Lab Hackathon UAE entry by AqionLabs.">
 <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/Inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#0A0F1A">
+<link rel="preload" href="assets/fonts/ReadexPro-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Unbounded-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/kit/tokens.css">
+<link rel="stylesheet" href="assets/kit/elements.css">
 <link rel="stylesheet" href="assets/app.css">
 </head>
 <body>
@@ -14,30 +19,40 @@
 <header class="top">
   <div class="brand">
     <img src="assets/mark.svg" width="28" height="28" alt="">
-    <div><span class="word">Mizan</span><span class="mono dim tag">S1 · Overseas inference leak</span></div>
+    <div><span class="word">Mizan</span><span class="tag">S1 · Overseas inference leak</span></div>
   </div>
   <div class="seg" role="radiogroup" aria-label="Recorded run">
     <button role="radio" aria-checked="true" data-run="S1-baseline">Baseline run</button>
     <button role="radio" aria-checked="false" data-run="S1-twist">Judge twist run</button>
   </div>
   <div class="verify">
-    <button id="verifyBtn" class="btn">Verify audit chain</button>
+    <button id="verifyBtn" class="btn primary">Verify audit chain</button>
     <span id="verifyOut" class="mono small" aria-live="polite"></span>
   </div>
 </header>
 
 <main>
-<section class="intro">
-  <p class="eyebrow mono">ITU AI for Good Lab Hackathon · United Arab Emirates · Government services</p>
+<section class="intro blueprint">
+  <p class="eyebrow">ITU AI for Good Lab Hackathon · United Arab Emirates · Government services</p>
   <div><h1>A policy war-room for public-service AI incidents.</h1>
-  <p class="lede">Six role agents get different fragments of a synthetic incident at different times. They argue with citations to UAE law and global examples, and only a human can decide. Every step is written to a hash-chained audit log, and this page renders that log.</p></div>
-  <div class="side"><ul class="facts mono" id="facts"></ul>
-  <p class="notice small">Synthetic scenario. Agents play institutional <em>roles</em>, not the positions of any real UAE entity. Agents are deterministic and retrieval-grounded (no LLM in this build). Not legal advice.</p></div>
+  <p class="lede">Six role agents get different fragments of a synthetic incident at different times. They argue with citations to UAE law and global examples, and <em>only a human can decide</em>. Every step is written to a hash-chained audit log, and this page renders that log.</p></div>
+  <div class="side">
+    <div class="board" aria-label="Run board">
+      <div class="board-head"><span>Run board</span><b id="boardRun">S1 · baseline</b></div>
+      <div class="cell wide"><span class="lbl">Audit records, SHA-256 chained</span><span class="flap" id="fRec" data-value="0000" aria-describedby="fRecT"></span><span class="sr" id="fRecT"></span></div>
+      <div class="cell"><span class="lbl">Messages</span><span class="flap" id="fMsg" data-value="00"></span></div>
+      <div class="cell"><span class="lbl">Gaps</span><span class="flap" id="fGap" data-value="0"></span></div>
+      <div class="cell"><span class="lbl">KB docs</span><span class="flap" id="fDoc" data-value="00"></span></div>
+      <div class="cell wide"><span class="lbl">Chunks</span><span class="flap" id="fChk" data-value="0000"></span></div>
+    </div>
+    <ul class="facts" id="facts"></ul>
+    <p class="notice">Synthetic scenario. Agents play institutional <em>roles</em>, not the positions of any real UAE entity. Agents are deterministic and retrieval-grounded (no LLM in this build). Not legal advice.</p>
+  </div>
 </section>
 
 <section id="warroom" class="warroom" aria-label="Incident replay">
   <div class="wr-head">
-    <h2>War-room replay</h2>
+    <div><p class="eyebrow">01 · Replay</p><h2>War-room replay</h2></div>
     <div class="player">
       <button id="playBtn" class="btn icon" aria-label="Play replay">▶</button>
       <input id="scrub" type="range" min="0" max="70" step="0.5" value="70" aria-label="Simulation time">
@@ -53,25 +68,25 @@
       <div id="lanes" class="lanes" role="list" aria-label="Timeline by role"></div>
       <ol id="feed" class="feed" aria-label="Chronological feed"></ol>
     </div>
-    <aside id="dossier" class="dossier" aria-live="polite" tabindex="-1">
-      <p class="dim">Select an event or message to see its claims, citations, verifier status and reasoning trace.</p>
+    <aside id="dossier" class="dossier glass" aria-live="polite" tabindex="-1">
+      <p class="dim small">Select an event or message to see its claims, citations, verifier status and reasoning trace.</p>
     </aside>
   </div>
 </section>
 
 <section class="gaps" aria-labelledby="gapsH">
-  <div class="sec-head"><h2 id="gapsH">Gap register</h2><p class="dim">Domain-level gaps found while mapping the incident to the KB, each with global examples. "Not found in KB" means not found in <em>this</em> corpus, not absent from law. Every row needs expert review.</p></div>
+  <div class="sec-head"><p class="eyebrow">02 · Gaps</p><h2 id="gapsH">Gap register</h2><p class="dim">Domain-level gaps found while mapping the incident to the KB, each with global examples. "Not found in KB" means not found in <em>this</em> corpus, not absent from law. Every row needs expert review.</p></div>
   <div id="gapList" class="gap-list"></div>
 </section>
 
 <section class="align" aria-labelledby="alignH">
-  <div class="sec-head"><h2 id="alignH">Y.3172 pipeline and AI Readiness mapping</h2><p class="dim">Each message carries the Y.3172 node it acts on and the ITU AI Readiness dimensions it touches. Select a node to filter the feed.</p></div>
+  <div class="sec-head"><p class="eyebrow">03 · Alignment</p><h2 id="alignH">Y.3172 pipeline and AI Readiness mapping</h2><p class="dim">Each message carries the Y.3172 node it acts on and the ITU AI Readiness dimensions it touches. Select a node to filter the feed.</p></div>
   <div id="pipeline" class="pipeline"></div>
   <div id="dims" class="dims"></div>
 </section>
 
 <section class="kb" aria-labelledby="kbH">
-  <div class="sec-head"><h2 id="kbH">Knowledge base</h2><p class="dim" id="kbMeta"></p></div>
+  <div class="sec-head"><p class="eyebrow">04 · Sources</p><h2 id="kbH">Knowledge base</h2><p class="dim" id="kbMeta"></p></div>
   <div class="kb-tools">
     <label class="search"><span class="sr">Search the knowledge base</span><input id="kbQ" type="search" placeholder="Search 1,275 chunks, e.g. cross-border transfer, serious incident, human oversight" autocomplete="off"></label>
     <div class="chips" role="radiogroup" aria-label="Scope">
@@ -83,9 +98,9 @@
   <div class="kb-grid">
     <ol id="kbResults" class="kb-results" aria-live="polite"></ol>
     <div class="manifest">
-      <h3 class="mono small">Manifest</h3>
+      <h3>Manifest</h3>
       <div id="manifest"></div>
-      <h3 class="mono small">Not ingested</h3>
+      <h3>Not ingested</h3>
       <ul id="notIngested" class="small"></ul>
     </div>
   </div>
@@ -93,7 +108,7 @@
 </section>
 
 <section class="method" aria-labelledby="methodH">
-  <h2 id="methodH">How this works, and where it does not</h2>
+  <p class="eyebrow">05 · Method</p><h2 id="methodH">How this works, and where it does not</h2>
   <div class="cols">
     <div><h3>Built</h3><ul>
       <li>KB built with the ITU reference ingestion code (parser, chunker, metadata, ChromaDB <span class="mono">KnowledgeBase</span>), article-level chunks for laws.</li>
@@ -128,6 +143,7 @@
     <a id="drLink" class="btn" target="_blank" rel="noopener">Open official source ↗</a>
   </div>
 </div>
+<script src="assets/kit/elements.js"></script>
 <script type="module" src="assets/app.js"></script>
 </body>
 </html>

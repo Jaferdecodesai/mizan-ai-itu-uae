@@ -279,8 +279,23 @@ function renderManifest(man, ev) {
   if (ev) {
     const rows = Object.entries(ev.methods).map(([k, m]) => `<tr><td>${k}</td><td>${m.doc_hits}/${ev.n_queries}</td><td>${m.section_hits}/${m.section_queries}</td><td>${m.doc_mrr5 ?? m["doc_mrr@5"]}</td></tr>`).join("");
     $("#evalBox").innerHTML = `<table><tr><th>retrieval</th><th>doc hit@5</th><th>article hit@5</th><th>MRR@5</th></tr>${rows}</table><p>Real run on ${ev.run_at.slice(0, 10)} with ${ev.n_queries} queries written by the author. Gold = expected document, plus the expected article for ${Object.values(ev.methods)[0].section_queries} of them. Scores are optimistic because the queries use legal wording. Agents use hybrid retrieval. File: <span class="mono">kb/eval/results.json</span>.</p>`;
+    flap("fDoc", man.documents); flap("fChk", man.chunks);
     $("#facts").innerHTML = [`<b>${man.documents}</b> documents`, `<b>${man.chunks.toLocaleString()}</b> chunks`, `hybrid doc hit@5 <b>${ev.methods.hybrid.doc_hits}/${ev.n_queries}</b>`, `<b>6</b> role agents + human gate`, `uneven, delayed delivery`, `deterministic agents · <b>no LLM</b>`].map(s => `<li>${s}</li>`).join("");
   }
+}
+
+
+/* ---------- split-flap run board (AqionLabs kit element 09) ---------- */
+function flap(id, n) {
+  const el = document.getElementById(id); if (!el) return;
+  const w = (el.dataset.value || "0").length, v = String(n).padStart(w, "0").slice(-w);
+  el.setAttribute("role", "img"); el.setAttribute("aria-label", String(n));
+  if (el.flapTo) el.flapTo(v); else el.textContent = v;
+}
+function updateBoard(id) {
+  const R = state.runs[id];
+  flap("fRec", R.lines.length); flap("fMsg", R.items.filter(i => i.kind === "msg").length); flap("fGap", R.gaps.length);
+  $("#boardRun").textContent = id === "S1-twist" ? "S1 · judge twist" : "S1 · baseline";
 }
 
 /* ---------- verify ---------- */
@@ -312,7 +327,7 @@ function setRun(id) {
   $("#verifyOut").textContent = ""; $("#verifyOut").className = "mono small";
   state.t = state.runs[id].maxT; state.sel = null;
   $("#dossier").innerHTML = `<p class="dim">${id === "S1-twist" ? "Judge twist run: at T+48 the product team asks to retrain on the leaked logs. Look for the OBJECT messages and the UNCITED flag." : "Baseline run without the judge twist."} Select an item to inspect it.</p>`;
-  renderLanes(); renderGaps(); renderAlign();
+  renderLanes(); renderGaps(); renderAlign(); updateBoard(id);
   history.replaceState(null, "", id === "S1-twist" ? "#twist" : "#");
 }
 
@@ -336,4 +351,4 @@ async function init() {
   document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("#drawer").hidden) closeDrawer(); });
   addEventListener("resize", () => { if (state.sel) drawLinks(findItem(state.sel)); });
 }
-init().catch(e => { document.querySelector("main").insertAdjacentHTML("afterbegin", `<p style="color:#b42318">Failed to load data: ${esc(e.message)}</p>`); });
+init().catch(e => { document.querySelector("main").insertAdjacentHTML("afterbegin", `<p style="color:var(--bad)">Failed to load data: ${esc(e.message)}</p>`); });

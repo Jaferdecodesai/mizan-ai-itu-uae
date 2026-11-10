@@ -1,0 +1,198 @@
+/* AqionLabs Design Kit — tokens.css
+   Usage: <html data-palette="ember-noir" data-type="gallery">
+   Load the matching Google Fonts URL from DESIGN_KIT.md (or preview.html). */
+
+:root, [data-palette="ember-noir"] {  /* Ember Noir */
+  --c-accent: #FF5A1F;
+  --c-base-1: #0E0D0C;
+  --c-base-2: #1C1A17;
+  --c-text: #F2EDE4;
+  --c-muted: #A39C90;
+  --c-border: #34302A;
+  --c-on-accent: #0E0D0C;
+  --c-accent-soft: color-mix(in srgb, var(--c-accent) 14%, transparent);
+  --c-accent-glow: color-mix(in srgb, var(--c-accent) 38%, transparent);
+}
+[data-palette="acid-moss"] {  /* Acid Moss */
+  --c-accent: #C6FF3D;
+  --c-base-1: #0B1210;
+  --c-base-2: #15201C;
+  --c-text: #E8F0EA;
+  --c-muted: #93A79E;
+  --c-border: #26352F;
+  --c-on-accent: #0B1210;
+  --c-accent-soft: color-mix(in srgb, var(--c-accent) 14%, transparent);
+  --c-accent-glow: color-mix(in srgb, var(--c-accent) 38%, transparent);
+}
+[data-palette="coral-clinic"] {  /* Coral Clinic */
+  --c-accent: #FF7A66;
+  --c-base-1: #0F1520;
+  --c-base-2: #1A2333;
+  --c-text: #EEF2F7;
+  --c-muted: #98A3B5;
+  --c-border: #2A3548;
+  --c-on-accent: #0F1520;
+  --c-accent-soft: color-mix(in srgb, var(--c-accent) 14%, transparent);
+  --c-accent-glow: color-mix(in srgb, var(--c-accent) 38%, transparent);
+}
+[data-palette="saffron-souk"] {  /* Saffron Souk */
+  --c-accent: #FFB800;
+  --c-base-1: #140F18;
+  --c-base-2: #231B2A;
+  --c-text: #F5EFE6;
+  --c-muted: #A99DB0;
+  --c-border: #382D41;
+  --c-on-accent: #140F18;
+  --c-accent-soft: color-mix(in srgb, var(--c-accent) 14%, transparent);
+  --c-accent-glow: color-mix(in srgb, var(--c-accent) 38%, transparent);
+}
+[data-palette="signal-pink"] {  /* Signal Pink */
+  --c-accent: #FF2E88;
+  --c-base-1: #0C0E13;
+  --c-base-2: #181C25;
+  --c-text: #EDEFF4;
+  --c-muted: #969CAB;
+  --c-border: #2A303D;
+  --c-on-accent: #0C0E13;
+  --c-accent-soft: color-mix(in srgb, var(--c-accent) 14%, transparent);
+  --c-accent-glow: color-mix(in srgb, var(--c-accent) 38%, transparent);
+}
+[data-palette="cobalt-civic"] {  /* Cobalt Civic */
+  --c-accent: #4D8DFF;
+  --c-base-1: #0A0F1A;
+  --c-base-2: #131B2C;
+  --c-text: #EAF0FA;
+  --c-muted: #93A0B8;
+  --c-border: #24304A;
+  --c-on-accent: #0A0F1A;
+  --c-accent-soft: color-mix(in srgb, var(--c-accent) 14%, transparent);
+  --c-accent-glow: color-mix(in srgb, var(--c-accent) 38%, transparent);
+}
+[data-palette="dune-mint"] {  /* Dune Mint */
+  --c-accent: #3DFFB0;
+  --c-base-1: #16130E;
+  --c-base-2: #262019;
+  --c-text: #F1EBE0;
+  --c-muted: #A69C8C;
+  --c-border: #3A3226;
+  --c-on-accent: #16130E;
+  --c-accent-soft: color-mix(in srgb, var(--c-accent) 14%, transparent);
+  --c-accent-glow: color-mix(in srgb, var(--c-accent) 38%, transparent);
+}
+:root, [data-type="gallery"] {  /* Gallery Grotesk */
+  --font-display: "Syne", ui-serif, Georgia, serif;
+  --font-body: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --display-weight: 800;
+  --display-tracking: -0.04em;
+  --display-leading: 0.95;
+  --display-transform: none;
+  --display-scale: 1;
+}
+[data-type="gulf"] {  /* Gulf Geometric */
+  --font-display: "Unbounded", ui-serif, Georgia, serif;
+  --font-body: "Readex Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+  --display-weight: 700;
+  --display-tracking: -0.02em;
+  --display-leading: 1.0;
+  --display-transform: none;
+  --display-scale: 0.85;
+}
+[data-type="editorial"] {  /* Editorial Soft Serif */
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, monospace;
+  --display-weight: 700;
+  --display-tracking: -0.03em;
+  --display-leading: 1.0;
+  --display-transform: none;
+  --display-scale: 1;
+}
+[data-type="studio"] {  /* Studio Bricolage */
+  --font-display: "Bricolage Grotesque", ui-serif, Georgia, serif;
+  --font-body: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
+  --display-weight: 800;
+  --display-tracking: -0.045em;
+  --display-leading: 0.95;
+  --display-transform: none;
+  --display-scale: 1;
+}
+[data-type="luxe"] {  /* Quiet Luxury */
+  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-body: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
+  --display-weight: 400;
+  --display-tracking: -0.01em;
+  --display-leading: 1.0;
+  --display-transform: none;
+  --display-scale: 1.1;
+}
+[data-type="stadium"] {  /* Stadium Condensed */
+  --font-display: "Big Shoulders Display", ui-serif, Georgia, serif;
+  --font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  --display-weight: 900;
+  --display-tracking: 0;
+  --display-leading: 0.9;
+  --display-transform: uppercase;
+  --display-scale: 1.15;
+}
+
+:root {
+  /* Type scale (rem @16px). Display sizes multiply by --display-scale. */
+  --fs-display-2xl: clamp(3rem, 7vw + 1rem, calc(6rem * var(--display-scale)));   /* 48→96px */
+  --fs-display-xl:  clamp(2.5rem, 5vw + 1rem, calc(4.5rem * var(--display-scale))); /* 40→72px */
+  --fs-h1: clamp(2.125rem, 4vw + 1rem, calc(3.5rem * var(--display-scale)));  /* 34→56px */
+  --fs-h2: clamp(1.75rem, 2.5vw + 1rem, calc(2.5rem * var(--display-scale))); /* 28→40px */
+  --fs-h3: 1.75rem;   /* 28px */
+  --fs-h4: 1.25rem;   /* 20px */
+  --fs-body-lg: 1.125rem; /* 18px */
+  --fs-body: 1rem;    /* 16px */
+  --fs-small: 0.875rem; /* 14px */
+  --fs-eyebrow: 0.75rem; /* 12px mono, uppercase, +0.14em */
+  --fs-hero: clamp(3rem, 8vw + 1rem, calc(7.5rem * var(--display-scale)));
+  --lh-tight: 1.05; --lh-snug: 1.2; --lh-body: 1.6;
+  --ls-tight: -0.03em; --ls-snug: -0.01em; --ls-wide: 0.14em;
+
+  /* Spacing (4px base) */
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px;
+  --sp-6: 32px; --sp-7: 48px; --sp-8: 64px; --sp-9: 96px; --sp-10: 128px;
+
+  /* Radii — pick ONE family per prototype: sharp (0/2) or soft (12/20) */
+  --r-0: 0; --r-xs: 2px; --r-sm: 6px; --r-md: 12px; --r-lg: 20px; --r-xl: 28px; --r-pill: 999px;
+
+  /* Shadows */
+  --sh-hard: 6px 6px 0 0 var(--c-accent);
+  --sh-hard-ink: 6px 6px 0 0 #000;
+  --sh-soft: 0 1px 0 rgba(255,255,255,.04) inset, 0 20px 40px -20px rgba(0,0,0,.6);
+  --sh-glow: 0 0 0 1px var(--c-accent-soft), 0 10px 40px -10px var(--c-accent-glow);
+
+  /* Motion */
+  --dur-instant: 80ms; --dur-fast: 160ms; --dur-base: 240ms; --dur-slow: 420ms; --dur-xslow: 700ms;
+  --ease-out: cubic-bezier(.22, 1, .36, 1);        /* entrances */
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);     /* moves/morphs */
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);  /* playful pops, small elements only */
+  --ease-in: cubic-bezier(.55, 0, 1, .45);         /* exits */
+
+  /* Layout */
+  --max-prose: 68ch; --max-content: 1200px; --max-wide: 1440px;
+  --gutter: clamp(16px, 4vw, 48px);
+}
+
+/* Base application */
+h1, h2, h3, .display { overflow-wrap: break-word; text-wrap: balance; }
+html { background: var(--c-base-1); color: var(--c-text); font-family: var(--font-body);
+  font-size: 100%; line-height: var(--lh-body); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+.display, h1, h2 { font-family: var(--font-display); font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking); line-height: var(--display-leading); text-transform: var(--display-transform); }
+.eyebrow { font-family: var(--font-mono); font-size: var(--fs-eyebrow); letter-spacing: var(--ls-wide); text-transform: uppercase; color: var(--c-muted); }
+.mono, code, kbd, .num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+::selection { background: var(--c-accent); color: var(--c-on-accent); }
+:focus-visible { outline: 2px solid var(--c-accent); outline-offset: 3px; border-radius: var(--r-xs); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
